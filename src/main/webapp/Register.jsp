@@ -69,9 +69,9 @@
 <div class="register-container">
     <h1>Register</h1>
     <form action="Register" method="post">
-        <input type="text" name="username" pattern="[A-Za-z]*" title="Only letters are allowed" placeholder="Enter your Name" required>
-        <input type="email" name="userEmail" placeholder="Enter your Email" required>
-        <input type="password" name="userPassword" placeholder="Enter your Password" required>
+        <input type="text" id="charOnly" pattern="[A-Za-z\s]+" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')"  placeholder="Enter your Name" name="username" required>
+        <input type="email" name="userEmail" placeholder="Enter your Email" name="userEmail" required>
+        <input type="password" name="userPassword" placeholder="Enter your Password" name="userPassword" required>
         <input type="submit" value="Register">
     </form>
     <% 

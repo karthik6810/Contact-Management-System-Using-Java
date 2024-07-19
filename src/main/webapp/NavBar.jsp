@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Register and Login Page</title>
+<title>Register or Login Page</title>
 <style>
     body {
         font-family: 'Barlow', sans-serif;

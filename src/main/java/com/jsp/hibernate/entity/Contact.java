@@ -13,7 +13,7 @@ public class Contact {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int contactId;
 	private String contactName;
-	private int contactNumber;
+	private long contactNumber;
 	
 	@ManyToOne
 	private User user;
@@ -42,13 +42,12 @@ public class Contact {
 		this.contactName = contactName;
 	}
 
-	public int getContactNumber() {
+	public long getContactNumber() {
 		return contactNumber;
 	}
 
-	public void setContactNumber(int contactNumber) {
+	public void setContactNumber(long contactNumber) {
 		this.contactNumber = contactNumber;
-	} 
-	
+	}	
 
 }

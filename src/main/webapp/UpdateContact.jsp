@@ -50,8 +50,8 @@
 	%>
 	<form action="updatedContact" method="post">
 		<input type="number" value="<%=contact.getContactId()%>" readonly="readonly" name="contactId"> 
-		<input type="text" value="<%=contact.getContactName()%>" name="contactName"> 
-		<input type="number" value="<%=contact.getContactNumber()%>" name="contactNumber"> 
+		<input type="text" value="<%=contact.getContactName()%>" id="charOnly" pattern="[A-Za-z\s]+" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')"  name="contactName" required> 
+		<input type="number" value="<%=contact.getContactNumber()%>" pattern="\d{10}" maxlength="10" title="Please enter exactly 10 digits"  name="contactNumber"> 
 		<input type="submit" value="Update">
 	</form>
 </body>

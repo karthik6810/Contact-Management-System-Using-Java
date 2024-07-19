@@ -71,7 +71,7 @@
     %>
 
     <form action="updateUser" method="post">
-        <input type="text" pattern="[A-Za-z]*" title="Only letters are allowed" value="<%=user.getUsername()%>" name="userName" required>
+        <input type="text" id="charOnly"  pattern="[A-Za-z\s]+" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')" value="<%=user.getUsername()%>" name="userName" required>
         <input type="email" value="<%=user.getUserEmail()%>" name="userEmail" required>
         <input type="password" value="<%=user.getUserPassword()%>" name="userPassword" required>
         <input type="submit" value="Update">

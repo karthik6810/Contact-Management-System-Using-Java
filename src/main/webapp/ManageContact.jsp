@@ -9,7 +9,7 @@
 <title>Manage Contacts</title>
 <style>
     body {
-         font-family: 'Barlow', sans-serif;
+        font-family: 'Barlow', sans-serif;
         background-color: #EEF5FF;
         margin: 0;
         padding: 0;

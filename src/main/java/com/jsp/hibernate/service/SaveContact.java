@@ -19,7 +19,7 @@ public class SaveContact extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String contactName = req.getParameter("contactName");
-		int contactNumber = Integer.parseInt(req.getParameter("contactNumber"));
+		long contactNumber = Long.parseLong(req.getParameter("contactNumber"));
 
 		HttpSession session = req.getSession();
 		User user = (User) session.getAttribute("user");

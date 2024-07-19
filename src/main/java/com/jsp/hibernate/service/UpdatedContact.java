@@ -19,7 +19,7 @@ public class UpdatedContact extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		int contactId = Integer.parseInt(req.getParameter("contactId"));
 		String contactName = req.getParameter("contactName");
-		int contactNumber = Integer.parseInt(req.getParameter("contactNumber"));
+		long contactNumber = Long.parseLong(req.getParameter("contactNumber"));
 
 		Contact contact = ContactDaoSingleton.getDao().findContact(contactId);
 		

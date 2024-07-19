@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Add new Contact</title>
 <style>
     body {
         font-family: 'Barlow', sans-serif;
@@ -24,7 +24,7 @@
         width: 300px;
     }
     input[type="text"],
-    input[type="number"],
+    input[type="tel"],
     input[type="submit"] {
         width: calc(100% - 20px);
         padding: 10px;
@@ -48,8 +48,8 @@
 <body>
 
 <form action="save" method="post">
-    <input type="text" pattern="[A-Za-z]*" title="Only letters are allowed"  placeholder="Enter Contact Name" name="contactName" required>
-    <input type="number" placeholder="Enter Contact Number" name="contactNumber" required>
+    <input type="text" id="charOnly" pattern="[A-Za-z\s]+" oninput="this.value = this.value.replace(/[^A-Za-z\s]/g, '')"  placeholder="Enter Contact Name" name="contactName" required>
+    <input type="tel" pattern="\d{10}" maxlength="10" title="Please enter exactly 10 digits" placeholder="Enter Your Contact Number" name="contactNumber" required>
     <input type="submit" value="Save">
 </form>
 

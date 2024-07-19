@@ -35,7 +35,7 @@ public class RegisterUser extends HttpServlet {
 			resp.sendRedirect("login.jsp");
 		}
 		else {
-			req.setAttribute("message", "Place Register Correctly");
+			req.setAttribute("message", "Plase Register Correctly");
 			req.getRequestDispatcher("Register.jsp").forward(req, resp);
 		}
 	}
